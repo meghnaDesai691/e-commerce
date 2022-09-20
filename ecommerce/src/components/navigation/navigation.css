@@ -1,0 +1,13 @@
+li{
+    color:black;
+    font-family: "Arial Black";
+}
+ul{
+    display: flex;
+    column-gap: 10px;
+    list-style-type: none;
+}
+ li.nav-link{
+    margin-top:3%;
+     font-size: 20px;
+}
