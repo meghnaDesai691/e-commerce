@@ -1,0 +1,31 @@
+.product-card .title-price button {
+    background-color: lightblue  ;
+    padding:10px;
+    color: darkblue;
+    cursor: pointer;
+    font-size: 20px;
+    border: none;
+    font-weight: bold;
+    box-shadow: 2px 2px 2px 2px grey;
+    border-radius: 7px;
+
+}
+
+.product-card .title-price button:hover{
+    background-color:lightcyan;
+
+}
+.product-card .item-img{
+    box-shadow: 4px 4px 4px 4px dimgrey;
+
+}
+.product-card .title-price{
+    font-size: 20px;
+    padding:1%;
+}
+.product-card .title-price .title{
+    padding-bottom:3%;
+}
+.product-card .title-price .price{
+    padding-bottom: 3%;
+}

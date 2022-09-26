@@ -4,9 +4,22 @@ import img1 from '../../assets/c-bimage-1.jpeg';
 import img2 from '../../assets/c-bimage-2.avif';
 import img3 from '../../assets/c-bimage-3.avif';
 import {Fragment} from "react";
+import ProductCard from "../product-card/product-card";
+import React from "react";
+import axios from "axios";
+import './home.css';
 
 
 const Home = ()=>{
+
+    const [best,setBest] = React.useState([]);
+    const getBestProducts = ()=>{
+        axios.get("http://localhost:8000/BestProducts")
+            .then(res=>{setBest(res.data)})
+    }
+    React.useEffect(()=>{
+        getBestProducts();
+    },[])
      return(
          <Fragment>
              <div className="carousal">
@@ -22,7 +35,13 @@ const Home = ()=>{
                      </div>
                  </Carousel>
              </div>
-             <div className="best-products">
+             <div className="best-products-container">
+                 <div className="best-header">
+                     <h2> Some Of Our Best Picks..</h2>
+                 </div>
+                 <div className="best-products">
+                     {best.map((pro)=><ProductCard props={pro}/>)}
+                 </div>
 
              </div>
          </Fragment>

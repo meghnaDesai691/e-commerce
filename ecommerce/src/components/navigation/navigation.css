@@ -1,13 +1,14 @@
-li{
-    color:black;
+.nav-bar .home,.products-route,.cart-route {
+    text-decoration: none;
+    padding:1%;
     font-family: "Arial Black";
+    color:black;
+    font-size: 23px;
+    margin-top:1%;
+
 }
-ul{
-    display: flex;
-    column-gap: 10px;
-    list-style-type: none;
-}
- li.nav-link{
-    margin-top:3%;
-     font-size: 20px;
+.nav-bar {
+  display: flex;
+    margin-top:2%;
+    margin-left:1%;
 }

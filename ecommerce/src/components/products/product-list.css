@@ -1,0 +1,16 @@
+.products{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 25px;
+
+    row-gap: 26px;
+    padding:2%;
+}
+.products-container{
+    margin: 5%;
+}
+
+.products-container .product-head{
+    font-size: 20px;
+    font-family: Charter;
+}
