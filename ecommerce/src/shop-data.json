@@ -60,25 +60,22 @@
       "id": 1,
       "name": "Brown Brim",
       "imageUrl": "https://i.ibb.co/ZYW3VTp/brown-brim.png",
-      "price": 25
+      "price": 25,
+      "quantity": 6
     },
     {
       "id": 2,
-      "name": "Blue Snapback",
-      "imageUrl": "https://i.ibb.co/X2VJP2W/blue-snapback.png",
-      "price": 16
+      "name": "Blue Beanie",
+      "imageUrl": "https://i.ibb.co/ypkgK0X/blue-beanie.png",
+      "price": 18,
+      "quantity": 2
     },
     {
       "id": 3,
-      "name": "Palm Tree Cap",
-      "imageUrl": "https://i.ibb.co/rKBDvJX/palm-tree-cap.png",
-      "price": 14
-    },
-    {
-      "id": 4,
-      "name": "Red Beanie",
-      "imageUrl": "https://i.ibb.co/bLB646Z/red-beanie.png",
-      "price": 18
+      "name": "Brown Cowboy",
+      "imageUrl": "https://i.ibb.co/QdJwgmp/brown-cowboy.png",
+      "price": 35,
+      "quantity": 5
     }
   ],
   "BestProducts": [

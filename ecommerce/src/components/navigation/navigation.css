@@ -1,14 +1,25 @@
-.nav-bar .home,.products-route,.cart-route {
-    text-decoration: none;
+.nav-bar .home-click,.products-click,.cart-click {
     padding:1%;
     font-family: "Arial Black";
     color:black;
     font-size: 23px;
-    margin-top:1%;
 
 }
 .nav-bar {
   display: flex;
-    margin-top:2%;
-    margin-left:1%;
+    flex-wrap: wrap;
+    column-gap: 1%;
+}
+.nav-bar .home-click .home,.products-click .products-route, .cart-click .cart-route{
+    text-decoration: none;
+    font-family: "Arial Black";
+    color:black;
+
+}
+.nav-bar .routes-words{
+    display: flex;
+    margin-top: 2%;
+    column-gap: 5%;
+
+
 }

@@ -1,4 +1,3 @@
-import {Button} from "@mui/material";
 import axios from "axios";
 import React from "react";
 import cart from '../../shop-data.json';
@@ -7,16 +6,24 @@ import './product-card.css';
 const ProductCard = ({props})=>{
   const [id,setId] = React.useState(1);
     const AddItemToCart = (item)=>{
-        const new_item = {
-            id: cart.Cart.length>=1 ? cart.Cart[cart.Cart.length - 1].id + 1 : 1,
-            name:item.name,
-            imageUrl:item.imageUrl,
-            price:item.price
+        console.log(item);
+ const found_item = cart.Cart.find((cartitem)=>cartitem.id==item.id);
+ console.log(found_item);
+        if(found_item){
+            console.log("i am put use me react!")
+            axios.put(`http://localhost:8000/Cart/${item.id}`,
+                {
+                    ...item,
+                    quantity:found_item.quantity+1
+                }
+                ).then(res=>console.log(res.data))
         }
-
-             axios.post(" http://localhost:8000/Cart/",new_item).then(res=>res.data);
-
-
+        else{
+            axios.post("http://localhost:8000/Cart",{
+                ...item,
+                quantity:1
+            }).then(res=>console.log(res.data));
+        }
     }
        return(
            <div className="product-card">
@@ -26,6 +33,7 @@ const ProductCard = ({props})=>{
                    <span className="title-price" >
                        <div className="title"><span style={{fontWeight:"bold"}}>Item Name:</span>{props.name}</div>
                        <div className="price"><span style={{fontWeight:"bold"}}>Price:</span>${props.price}</div>
+
                        <button onClick={()=>AddItemToCart(props)}>Add to Cart</button>
                    </span>
            </div>

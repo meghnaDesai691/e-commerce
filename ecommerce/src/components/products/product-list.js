@@ -11,7 +11,7 @@ const ProductList = ()=>{
     }
     React.useEffect(()=>{
         getProducts();
-    },[products])
+    },[])
 
 
     return(
